@@ -1,0 +1,12 @@
+{
+    "given_name": "Jane",
+    "family_name": "Doe",
+    "nickname": "jane",
+    "name": "Jane Doe",
+    "picture": "https://lh3.googleusercontent.com/a-/AOh14GjkV1mtbisk0U73rb0yMAvK_4H_uWFPnc-rCbyi9w=s96-c",
+    "locale": "en-GB",
+    "updated_at": "2022-06-12T08:47:46.406Z",
+    "email": "janedoe@gmail.com",
+    "email_verified": true,
+    "sub": "google-oauth2|103079669026135397520"
+}

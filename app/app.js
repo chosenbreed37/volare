@@ -61,6 +61,9 @@ app.use(function (req, res, next) {
   res.locals.user = req.oidc.user;
   res.locals.isAuthenticated = req.oidc.isAuthenticated();
   res.locals.activeRoute = req.originalUrl;
+
+  logger.info('>>> user: ', JSON.stringify(res.locals.user));
+  logger.info('>>> isAuthenticated: ', res.locals.isAuthenticated);
   next();
 });
 
@@ -77,7 +80,6 @@ app.use(function (req, res, next) {
 
 // error handler
 app.use(function (err, req, res, next) {
-  logger.info('>>> boom boom...');
   logger.info('>>> error: ', err.message);
   // set locals, only providing error in development
   res.locals.message = err.message;

@@ -239,42 +239,45 @@
                             <label for="province">Province</label>
                             <input type="text" class="form-control" name="province" id="province">
                         </div>
-                        <h4>Relatives, friends living in Mozambique</h4>
-                        <table x-data="relatives">
-                            <thead>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Nationality</th>
-                                    <th>Relationship</th>
-                                    <th>Address</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><input type="text" name="rel-1-name" class="form-control" /></td>
-                                    <td><input type="text" name="rel-1-nationality" class="form-control" /></td>
-                                    <td><input type="text" name="rel-1-relationship" class="form-control" /></td>
-                                    <td><input type="text" name="rel-1-address" class="form-control" /></td>
-                                </tr>
-                                <tr x-show="showRel2">
-                                    <td><input type="text" name="rel-2-name" class="form-control" /></td>
-                                    <td><input type="text" name="rel-2-nationality" class="form-control" /></td>
-                                    <td><input type="text" name="rel-2-relationship" class="form-control" /></td>
-                                    <td><input type="text" name="rel-2-address" class="form-control" /></td>
-                                </tr>
-                                <tr x-show="showRel3">
-                                    <td><input type="text" name="rel-3-name" class="form-control" /></td>
-                                    <td><input type="text" name="rel-3-nationality" class="form-control" /></td>
-                                    <td><input type="text" name="rel-3-relationship" class="form-control" /></td>
-                                    <td><input type="text" name="rel-3-address" class="form-control" /></td>
-                                </tr>
-                            </tbody>
-                            <tfoot>
-                                <tr>
-                                    <td colspan="4"><button x-show="addMore" type="button" @click="more">More</button></td>
-                                </tr>
-                            </tfoot>
-                        </table>
+                        <div class="form-group col-md-6 mt-3">
+                            <h4>Relatives, friends living in Mozambique</h4>
+                            <table x-data="relatives">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Nationality</th>
+                                        <th>Relationship</th>
+                                        <th>Address</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><input type="text" name="rel-1-name" class="form-control" /></td>
+                                        <td><input type="text" name="rel-1-nationality" class="form-control" /></td>
+                                        <td><input type="text" name="rel-1-relationship" class="form-control" /></td>
+                                        <td><input type="text" name="rel-1-address" class="form-control" /></td>
+                                    </tr>
+                                    <tr x-show="showRel2">
+                                        <td><input type="text" name="rel-2-name" class="form-control" /></td>
+                                        <td><input type="text" name="rel-2-nationality" class="form-control" /></td>
+                                        <td><input type="text" name="rel-2-relationship" class="form-control" /></td>
+                                        <td><input type="text" name="rel-2-address" class="form-control" /></td>
+                                    </tr>
+                                    <tr x-show="showRel3">
+                                        <td><input type="text" name="rel-3-name" class="form-control" /></td>
+                                        <td><input type="text" name="rel-3-nationality" class="form-control" /></td>
+                                        <td><input type="text" name="rel-3-relationship" class="form-control" /></td>
+                                        <td><input type="text" name="rel-3-address" class="form-control" /></td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="4"><button x-show="addMore" type="button"
+                                                @click="more">More</button></td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
                         <!--
                         <div class="my-3">
                             <div class="loading">Loading</div>

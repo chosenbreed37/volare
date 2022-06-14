@@ -7,14 +7,15 @@ import logger  from '../services/logger';
 const router = express.Router();
 
 const toApplication = (request) => {
-    const { username, visatype, firstname, lastname } = request;
-
+    const { username } = request;
+    const timestamp = new Date().toISOString();
     return {
         id: uuidv4(),
         username,
-        visatype,
-        firstname,
-        lastname
+        form: JSON.stringify(request),
+        timestamp,
+        country: 'Mozambique',
+        status: 'submitted'
     };
 }
 
@@ -25,10 +26,10 @@ router.get('/', requiresAuth(), (req, res) => {
 
 router.post('/', (req, res) => {
     logger.info('post apply...');
+    logger.info('>>> user: ', req.oidc.user);
     const user = req.oidc.user;
-    logger.info('>>> request.body: ', req.body);
+
     const application = toApplication({...req.body, username: user.email});
-    logger.info(`application: ${JSON.stringify(application)}`);
     
     saveApplication(application);
 
