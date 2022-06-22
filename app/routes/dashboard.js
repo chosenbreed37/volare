@@ -10,7 +10,7 @@ router.get('/', requiresAuth(), async (req, res) => {
     logger.info(`get applications for ${username}`);
     const applications = await getApplications('chosenbreed@gmail.com');
     logger.info('>>> applications: ', JSON.stringify(applications));
-    logger.info(applications);
+    logger.info(JSON.stringify(applications.map(x => ({id: x.id, username: x.username}))));
     res.render('dashboard', { title: 'Dashboard', user: req.oidc.user, applications });
 });
 

@@ -1,4 +1,4 @@
- var sqlite3 = require('sqlite3');
+var sqlite3 = require('sqlite3');
 var mkdirp = require('mkdirp');
 
 mkdirp.sync('var/db');
@@ -29,10 +29,13 @@ db.serialize(function () {
 });
 
 db.all('select * from applications', (error, rows) => {
-
-  rows && rows.forEach(element => {
-    console.log('>>> application: ', element);
-  });
+  if (error) {
+    console.log('>>> error: ', error);
+  } else {
+    rows && rows.forEach(application => {
+      console.log('>>> application: ', application.id);
+    });
+  }
 });
 
 module.exports = db;
