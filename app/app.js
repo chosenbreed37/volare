@@ -8,20 +8,27 @@ import createError from 'http-errors';
 import applyRouter from './routes/apply';
 import dashboardRouter from './routes/dashboard';
 import submittedRouter from './routes/submitted';
+import applicationsRouter from './routes/applications';
 import { auth } from 'express-openid-connect';
 import 'dotenv/config';
 import bodyParser from 'body-parser';
 import multer from 'multer';
 import logger from './services/logger';
+import expressLayouts from 'express-ejs-layouts';
 
 const upload = multer();
 
 var app = express();
 const port = process.env.PORT || 3000;
 
+// static files
+app.use(express.static('public'));
+
 // view engine setup
-app.set('views', path.join(__dirname, '../views'));
+app.use(expressLayouts);
+app.set('layout', './layouts/full-width');
 app.set('view engine', 'ejs');
+//app.set('views', path.join(__dirname, '../views'));
 app.set('port', port);
 
 const config = {
@@ -50,8 +57,8 @@ app.use(auth(config));
 //app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(bodyParser.urlencoded({extended: false}));
-app.use(bodyParser.json()); 
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 app.use(upload.array());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
@@ -61,9 +68,6 @@ app.use(function (req, res, next) {
   res.locals.user = req.oidc.user;
   res.locals.isAuthenticated = req.oidc.isAuthenticated();
   res.locals.activeRoute = req.originalUrl;
-
-  logger.info('>>> user: ', JSON.stringify(res.locals.user));
-  logger.info('>>> isAuthenticated: ', res.locals.isAuthenticated);
   next();
 });
 
@@ -72,6 +76,8 @@ app.use('/dashboard', dashboardRouter);
 app.use('/apply', applyRouter);
 app.use('/users', usersRouter);
 app.use('/submitted', submittedRouter);
+app.use('/applications', applicationsRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

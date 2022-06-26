@@ -55,6 +55,7 @@
     "dotenv": "^16.0.0",
     "ejs": "^3.1.7",
     "express": "^4.17.0",
+    "express-ejs-layouts": "^2.5.1",
     "express-openid-connect": "^2.7.2",
     "express-session": "^1.17.2",
     "form-data": "^4.0.0",

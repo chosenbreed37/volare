@@ -1,330 +1,244 @@
-<!doctype html>
-<html lang="en">
+<!-- ======= Contact Section ======= -->
+<section id="contact" class="contact">
+    <div class="container">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>volare | evisa portal</title>
-    <meta content="e-visa,visa,Mozambique" name="description">
-    <meta content="e-visa,visa,Mozambique" name="keywords">
-    <link href="assets/img/globe.jpg" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-    <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-        rel="stylesheet">
-
-    <!-- Vendor CSS Files -->
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-    <!-- Template Main CSS File -->
-    <link href="assets/css/style.css" rel="stylesheet" />
-</head>
-
-<body>
-    <!-- ======= Header ======= -->
-    <header id="header" class="fixed-top">
-        <div class="container d-flex align-items-center justify-content-between">
-
-            <h1 class="logo"><a href="/">volare</a></h1>
-            <!-- Uncomment below if you prefer to use an image logo -->
-            <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-
-            <nav id="navbar" class="navbar">
-                <ul>
-                    <li><a class="nav-link scrollto active" href="/">Home</a></li>
-                    <li><a class="nav-link scrollto" href="/about">About</a></li>
-                    <li><a class="nav-link scrollto" href="/contact">Contact</a></li>
-                    <li><a class="getstarted scrollto" href="/logout">Sign Out</a></li>
-                </ul>
-                <i class="bi bi-list mobile-nav-toggle"></i>
-            </nav><!-- .navbar -->
-
+        <div class="section-title">
+            <h2>Apply</h2>
+            <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
         </div>
-    </header><!-- End Header -->
 
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-        <div class="container">
+        <div class="row">
 
-            <div class="section-title">
-                <h2>Apply</h2>
-                <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
-            </div>
-
-            <div class="row">
-
-                <div class="col-lg-12 mt-5 mt-lg-0 d-flex align-items-stretch">
-                    <form action="/apply" method="post" role="form" class="php-email-form"
-                        enctype="multipart/form-data">
-                        <div class="row">
-                            <div class="form-group col-md-6">
-                                <label for="name">Visa Type</label>
-                                <div class="btn-group form-control" role="group"
-                                    aria-label="Basic radio toggle button group">
-                                    <input type="radio" class="btn-check" name="visatype" id="temporary"
-                                        value="temporary" autocomplete="off" checked>
-                                    <label class="btn btn-outline-secondary" for="temporary">Temporary</label>
-
-                                    <input type="radio" class="btn-check" name="visatype" id="single" value="single"
-                                        autocomplete="off" checked="checked">
-                                    <label class="btn btn-outline-secondary" for="single">Single</label>
-
-                                    <input type="radio" class="btn-check" name="visatype" id="multiple" value="multiple"
-                                        autocomplete="off">
-                                    <label class="btn btn-outline-secondary" for="multiple">Multiple</label>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="form-group col-md-3">
-                            <label for="firstname">Surname</label>
-                            <input type="text" name="surname" class="form-control" id="surname">
-                        </div>
-                        <div class="form-group col-md-6 mt-3 mt-md-0">
-                            <label for="lastname">Full Name</label>
-                            <input type="text" class="form-control" name="fullname" id="fullname">
-                        </div>
-                        <div class="form-group col-md-6 mt-3">
-                            <label for="maidenname">Maiden Name</label>
-                            <input type="text" class="form-control" name="maidenname" id="maidenname">
-                        </div>
-                        <div class="form-group col-md-6 mt-3">
-                            <label for="placeOfBirth">Country and Place of Birth</label>
-                            <input type="text" class="form-control" name="placeOfBirth" id="placeOfBirth">
-                        </div>
-                        <div class="form-group col-md-3 mt-3">
-                            <label for="dateOfBirth">Date of Birth</label>
-                            <input type="date" class="form-control" name="dateOfBirth" id="dateOfBirth">
-                        </div>
-                        <div class="form-group col-md-3 mt-3">
-                            <label for="gender">Sex</label>
-                            <input type="text" class="form-control" name="gender" id="gender">
-                        </div>
-                        <div class="form-group col-md-3 mt-3">
-                            <label for="maritalStatus">Marital Status</label>
-                            <input type="text" class="form-control" name="maritalStatus" id="maritalStatus">
-                        </div>
-                        <div class="form-group col-md-3 mt-3">
-                            <label for="nationality">Nationality</label>
-                            <input type="text" class="form-control" name="nationality" id="nationality">
-                        </div>
-                        <div class="form-group col-md-3 mt-3">
-                            <label for="passportNo">Passport No.</label>
-                            <input type="text" class="form-control" name="passportNo" id="passportNo">
-                        </div>
-                        <div class="form-group col-md-3 mt-3">
-                            <label for="dateOfIssue">Date of Issue</label>
-                            <input type="date" class="form-control" name="dateOfIssue" id="dateOfIssue">
-                        </div>
-                        <div class="form-group col-md-3 mt-3">
-                            <label for="expiryDate">Validity</label>
-                            <input type="date" class="form-control" name="expiryDate" id="expiryDate">
-                        </div>
-                        <div class="form-group col-md-3 mt-3">
-                            <label for="passportNationality">Passport Nationality</label>
-                            <input type="text" class="form-control" name="passportNationality" id="passportNationality">
-                        </div>
-                        <div class="form-group col-md-3 mt-3">
-                            <label for="occupation">Prefession/Occupation</label>
-                            <input type="text" class="form-control" name="occupation" id="occupation">
-                        </div>
-                        <div class="form-group col-md-6 mt-3">
-                            <label for="position">Position You Hold</label>
-                            <input type="text" class="form-control" name="position" id="position" />
-                        </div>
-                        <div class="form-group col-md-6 mt-3">
-                            <label for="employer">Institution, Organisation or firm you work for</label>
-                            <input type="text" class="form-control" name="employer" id="employer">
-                        </div>
-                        <div class="form-group col-md-6 mt-3">
-                            <label for="address">Address of the permanent residence</label>
-                            <input type="text" class="form-control" name="address" id="address" />
-                        </div>
-                        <div class="form-group col-md-3 mt-3">
-                            <label for="telephoneNo">Telephone (Including area code)</label>
-                            <input type="text" class="form-control" name="telephoneNo" id="telephoneNo" />
-                        </div>
-                        <div class="form-group col-md-6 mt-3">
-                            <label for="email">Email Address</label>
-                            <input type="text" class="form-control" name="email" id="email">
-                        </div>
-                        <div class="form-group col-md-6 mt-3">
-                            <label for="visitedBefore">Have you ever before been in Mozambique</label>
+            <div class="col-lg-12 mt-5 mt-lg-0 d-flex align-items-stretch">
+                <form action="/apply" method="post" role="form" class="php-email-form" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="name">Visa Type</label>
                             <div class="btn-group form-control" role="group"
                                 aria-label="Basic radio toggle button group">
-                                <input type="radio" class="btn-check" name="visitedBefore" id="visitedbefore-yes"
-                                    value="visitedbefore-yes" autocomplete="off" checked>
-                                <label class="btn btn-outline-secondary" for="visitedbefore-yes">Yes</label>
-                                <input type="radio" class="btn-check" name="visitedBefore" id="visitedbefore-no"
-                                    value="visitedbefore-no" checked="checked" autocomplete="off">
-                                <label class="btn btn-outline-secondary" for="visitedbefore-no">No</label>
+                                <input type="radio" class="btn-check" name="visatype" id="temporary" value="temporary"
+                                    autocomplete="off" checked>
+                                <label class="btn btn-outline-secondary" for="temporary">Temporary</label>
+
+                                <input type="radio" class="btn-check" name="visatype" id="single" value="single"
+                                    autocomplete="off" checked="checked">
+                                <label class="btn btn-outline-secondary" for="single">Single</label>
+
+                                <input type="radio" class="btn-check" name="visatype" id="multiple" value="multiple"
+                                    autocomplete="off">
+                                <label class="btn btn-outline-secondary" for="multiple">Multiple</label>
                             </div>
                         </div>
-                        <div class="form-group col-md-6 mt-3">
-                            <label for="livedBefore">Have you ever before lived in Mozambique</label>
-                            <div class="btn-group form-control" role="group"
-                                aria-label="Basic radio toggle button group">
-                                <input type="radio" class="btn-check" name="livedBefore" id="livedbefore-yes"
-                                    value="livedbefore-yes" autocomplete="off" checked>
-                                <label class="btn btn-outline-secondary" for="livedbefore-yes">Yes</label>
-                                <input type="radio" class="btn-check" name="livedBefore" checked="checked"
-                                    id="livedbefore-no" value="livedbefore-no" autocomplete="off">
-                                <label class="btn btn-outline-secondary" for="livedbefore-no">No</label>
-                            </div>
+
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="firstname">Surname</label>
+                        <input type="text" name="surname" class="form-control" id="surname">
+                    </div>
+                    <div class="form-group col-md-6 mt-3 mt-md-0">
+                        <label for="lastname">Full Name</label>
+                        <input type="text" class="form-control" name="fullname" id="fullname">
+                    </div>
+                    <div class="form-group col-md-6 mt-3">
+                        <label for="maidenname">Maiden Name</label>
+                        <input type="text" class="form-control" name="maidenname" id="maidenname">
+                    </div>
+                    <div class="form-group col-md-6 mt-3">
+                        <label for="placeOfBirth">Country and Place of Birth</label>
+                        <input type="text" class="form-control" name="placeOfBirth" id="placeOfBirth">
+                    </div>
+                    <div class="form-group col-md-3 mt-3">
+                        <label for="dateOfBirth">Date of Birth</label>
+                        <input type="date" class="form-control" name="dateOfBirth" id="dateOfBirth">
+                    </div>
+                    <div class="form-group col-md-3 mt-3">
+                        <label for="gender">Sex</label>
+                        <input type="text" class="form-control" name="gender" id="gender">
+                    </div>
+                    <div class="form-group col-md-3 mt-3">
+                        <label for="maritalStatus">Marital Status</label>
+                        <input type="text" class="form-control" name="maritalStatus" id="maritalStatus">
+                    </div>
+                    <div class="form-group col-md-3 mt-3">
+                        <label for="nationality">Nationality</label>
+                        <input type="text" class="form-control" name="nationality" id="nationality">
+                    </div>
+                    <div class="form-group col-md-3 mt-3">
+                        <label for="passportNo">Passport No.</label>
+                        <input type="text" class="form-control" name="passportNo" id="passportNo">
+                    </div>
+                    <div class="form-group col-md-3 mt-3">
+                        <label for="dateOfIssue">Date of Issue</label>
+                        <input type="date" class="form-control" name="dateOfIssue" id="dateOfIssue">
+                    </div>
+                    <div class="form-group col-md-3 mt-3">
+                        <label for="expiryDate">Validity</label>
+                        <input type="date" class="form-control" name="expiryDate" id="expiryDate">
+                    </div>
+                    <div class="form-group col-md-3 mt-3">
+                        <label for="passportNationality">Passport Nationality</label>
+                        <input type="text" class="form-control" name="passportNationality" id="passportNationality">
+                    </div>
+                    <div class="form-group col-md-3 mt-3">
+                        <label for="occupation">Prefession/Occupation</label>
+                        <input type="text" class="form-control" name="occupation" id="occupation">
+                    </div>
+                    <div class="form-group col-md-6 mt-3">
+                        <label for="position">Position You Hold</label>
+                        <input type="text" class="form-control" name="position" id="position" />
+                    </div>
+                    <div class="form-group col-md-6 mt-3">
+                        <label for="employer">Institution, Organisation or firm you work for</label>
+                        <input type="text" class="form-control" name="employer" id="employer">
+                    </div>
+                    <div class="form-group col-md-6 mt-3">
+                        <label for="address">Address of the permanent residence</label>
+                        <input type="text" class="form-control" name="address" id="address" />
+                    </div>
+                    <div class="form-group col-md-3 mt-3">
+                        <label for="telephoneNo">Telephone (Including area code)</label>
+                        <input type="text" class="form-control" name="telephoneNo" id="telephoneNo" />
+                    </div>
+                    <div class="form-group col-md-6 mt-3">
+                        <label for="email">Email Address</label>
+                        <input type="text" class="form-control" name="email" id="email">
+                    </div>
+                    <div class="form-group col-md-6 mt-3">
+                        <label for="visitedBefore">Have you ever before been in Mozambique</label>
+                        <div class="btn-group form-control" role="group" aria-label="Basic radio toggle button group">
+                            <input type="radio" class="btn-check" name="visitedBefore" id="visitedbefore-yes"
+                                value="visitedbefore-yes" autocomplete="off" checked>
+                            <label class="btn btn-outline-secondary" for="visitedbefore-yes">Yes</label>
+                            <input type="radio" class="btn-check" name="visitedBefore" id="visitedbefore-no"
+                                value="visitedbefore-no" checked="checked" autocomplete="off">
+                            <label class="btn btn-outline-secondary" for="visitedbefore-no">No</label>
                         </div>
-                        <div class="form-group col-md-6 mt-3">
-                            <label for="reasonForLeaving">Why did you leave Mozambique?</label>
-                            <input type="text" class="form-control" name="reasonForLeaving" id="reasonForLeaving">
+                    </div>
+                    <div class="form-group col-md-6 mt-3">
+                        <label for="livedBefore">Have you ever before lived in Mozambique</label>
+                        <div class="btn-group form-control" role="group" aria-label="Basic radio toggle button group">
+                            <input type="radio" class="btn-check" name="livedBefore" id="livedbefore-yes"
+                                value="livedbefore-yes" autocomplete="off" checked>
+                            <label class="btn btn-outline-secondary" for="livedbefore-yes">Yes</label>
+                            <input type="radio" class="btn-check" name="livedBefore" checked="checked"
+                                id="livedbefore-no" value="livedbefore-no" autocomplete="off">
+                            <label class="btn btn-outline-secondary" for="livedbefore-no">No</label>
                         </div>
-                        <div class="form-group col-md-3 mt-3">
-                            <label for="dateOfDeparture">Date of exit</label>
-                            <input type="date" class="form-control" name="dateOfDeparture" id="dateOfDeparture">
-                        </div>
-                        <div class="form-group col-md-6 mt-3">
-                            <label for="institutions">Mention the institutions and firms to which you where
-                                attached</label>
-                            <input type="text" class="form-control" name="institutions" id="institutions">
-                        </div>
-                        <div class="form-group col-md-6 mt-3">
-                            <label for="reasonForEntry">In detail give reasons for your entry in Mozambique</label>
-                            <input type="text" class="form-control" name="reasonForEntry" id="reasonForEntry">
-                        </div>
-                        <div class="form-group col-md-6 mt-3">
-                            <label for="lengthOfStay">Length of stay in Mozambique</label>
-                            <input type="text" class="form-control" name="lengthOfStay" id="lengthOfStay">
-                        </div>
-                        <div class="form-group col-md-6 mt-3">
-                            <label for="dateOfEntry">Date of entry</label>
-                            <input type="date" class="form-control" name="dateOfEntry" id="dateOfEntry">
-                        </div>
-                        <div class="form-group col-md-6 mt-3">
-                            <label for="dateOfExit">Date of exit</label>
-                            <input type="date" class="form-control" name="dateOfExit" id="dateOfExit">
-                        </div>
-                        <div class="form-group col-md-6 mt-3">
-                            <label for="entryBorder">Entry border</label>
-                            <input type="text" class="form-control" name="entryBorder" id="entryBorder">
-                        </div>
-                        <div class="form-group col-md-6 mt-3">
-                            <label for="exitBorder">Exit border</label>
-                            <input type="text" class="form-control" name="exitBorder" id="exitBorder">
-                        </div>
-                        <div class="form-group col-md-6 mt-3">
-                            <label for="exitBorder">Exit border</label>
-                            <input type="text" class="form-control" name="exitBorder" id="exitBorder">
-                        </div>
-                        <div class="form-group col-md-6 mt-3">
-                            <label for="houseNo">House No</label>
-                            <input type="text" class="form-control" name="houseNo" id="houseNo">
-                        </div>
-                        <div class="form-group col-md-6 mt-3">
-                            <label for="street">Avenue/Street</label>
-                            <input type="text" class="form-control" name="street" id="street">
-                        </div>
-                        <div class="form-group col-md-6 mt-3">
-                            <label for="city">City</label>
-                            <input type="text" class="form-control" name="city" id="city">
-                        </div>
-                        <div class="form-group col-md-6 mt-3">
-                            <label for="district">District</label>
-                            <input type="text" class="form-control" name="district" id="district">
-                        </div>
-                        <div class="form-group col-md-6 mt-3">
-                            <label for="province">Province</label>
-                            <input type="text" class="form-control" name="province" id="province">
-                        </div>
-                        <div class="form-group col-md-6 mt-3">
-                            <h4>Relatives, friends living in Mozambique</h4>
-                            <table x-data="relatives">
-                                <thead>
-                                    <tr>
-                                        <th>Name</th>
-                                        <th>Nationality</th>
-                                        <th>Relationship</th>
-                                        <th>Address</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><input type="text" name="rel-1-name" class="form-control" /></td>
-                                        <td><input type="text" name="rel-1-nationality" class="form-control" /></td>
-                                        <td><input type="text" name="rel-1-relationship" class="form-control" /></td>
-                                        <td><input type="text" name="rel-1-address" class="form-control" /></td>
-                                    </tr>
-                                    <tr x-show="showRel2">
-                                        <td><input type="text" name="rel-2-name" class="form-control" /></td>
-                                        <td><input type="text" name="rel-2-nationality" class="form-control" /></td>
-                                        <td><input type="text" name="rel-2-relationship" class="form-control" /></td>
-                                        <td><input type="text" name="rel-2-address" class="form-control" /></td>
-                                    </tr>
-                                    <tr x-show="showRel3">
-                                        <td><input type="text" name="rel-3-name" class="form-control" /></td>
-                                        <td><input type="text" name="rel-3-nationality" class="form-control" /></td>
-                                        <td><input type="text" name="rel-3-relationship" class="form-control" /></td>
-                                        <td><input type="text" name="rel-3-address" class="form-control" /></td>
-                                    </tr>
-                                </tbody>
-                                <tfoot>
-                                    <tr>
-                                        <td colspan="4"><button x-show="addMore" type="button"
-                                                @click="more">More</button></td>
-                                    </tr>
-                                </tfoot>
-                            </table>
-                        </div>
-                        <!--
+                    </div>
+                    <div class="form-group col-md-6 mt-3">
+                        <label for="reasonForLeaving">Why did you leave Mozambique?</label>
+                        <input type="text" class="form-control" name="reasonForLeaving" id="reasonForLeaving">
+                    </div>
+                    <div class="form-group col-md-3 mt-3">
+                        <label for="dateOfDeparture">Date of exit</label>
+                        <input type="date" class="form-control" name="dateOfDeparture" id="dateOfDeparture">
+                    </div>
+                    <div class="form-group col-md-6 mt-3">
+                        <label for="institutions">Mention the institutions and firms to which you where
+                            attached</label>
+                        <input type="text" class="form-control" name="institutions" id="institutions">
+                    </div>
+                    <div class="form-group col-md-6 mt-3">
+                        <label for="reasonForEntry">In detail give reasons for your entry in Mozambique</label>
+                        <input type="text" class="form-control" name="reasonForEntry" id="reasonForEntry">
+                    </div>
+                    <div class="form-group col-md-6 mt-3">
+                        <label for="lengthOfStay">Length of stay in Mozambique</label>
+                        <input type="text" class="form-control" name="lengthOfStay" id="lengthOfStay">
+                    </div>
+                    <div class="form-group col-md-6 mt-3">
+                        <label for="dateOfEntry">Date of entry</label>
+                        <input type="date" class="form-control" name="dateOfEntry" id="dateOfEntry">
+                    </div>
+                    <div class="form-group col-md-6 mt-3">
+                        <label for="dateOfExit">Date of exit</label>
+                        <input type="date" class="form-control" name="dateOfExit" id="dateOfExit">
+                    </div>
+                    <div class="form-group col-md-6 mt-3">
+                        <label for="entryBorder">Entry border</label>
+                        <input type="text" class="form-control" name="entryBorder" id="entryBorder">
+                    </div>
+                    <div class="form-group col-md-6 mt-3">
+                        <label for="exitBorder">Exit border</label>
+                        <input type="text" class="form-control" name="exitBorder" id="exitBorder">
+                    </div>
+                    <div class="form-group col-md-6 mt-3">
+                        <label for="exitBorder">Exit border</label>
+                        <input type="text" class="form-control" name="exitBorder" id="exitBorder">
+                    </div>
+                    <div class="form-group col-md-6 mt-3">
+                        <label for="houseNo">House No</label>
+                        <input type="text" class="form-control" name="houseNo" id="houseNo">
+                    </div>
+                    <div class="form-group col-md-6 mt-3">
+                        <label for="street">Avenue/Street</label>
+                        <input type="text" class="form-control" name="street" id="street">
+                    </div>
+                    <div class="form-group col-md-6 mt-3">
+                        <label for="city">City</label>
+                        <input type="text" class="form-control" name="city" id="city">
+                    </div>
+                    <div class="form-group col-md-6 mt-3">
+                        <label for="district">District</label>
+                        <input type="text" class="form-control" name="district" id="district">
+                    </div>
+                    <div class="form-group col-md-6 mt-3">
+                        <label for="province">Province</label>
+                        <input type="text" class="form-control" name="province" id="province">
+                    </div>
+                    <div class="form-group col-md-6 mt-3">
+                        <h4>Relatives, friends living in Mozambique</h4>
+                        <table x-data="relatives">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Nationality</th>
+                                    <th>Relationship</th>
+                                    <th>Address</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="text" name="rel-1-name" class="form-control" /></td>
+                                    <td><input type="text" name="rel-1-nationality" class="form-control" /></td>
+                                    <td><input type="text" name="rel-1-relationship" class="form-control" /></td>
+                                    <td><input type="text" name="rel-1-address" class="form-control" /></td>
+                                </tr>
+                                <tr x-show="showRel2">
+                                    <td><input type="text" name="rel-2-name" class="form-control" /></td>
+                                    <td><input type="text" name="rel-2-nationality" class="form-control" /></td>
+                                    <td><input type="text" name="rel-2-relationship" class="form-control" /></td>
+                                    <td><input type="text" name="rel-2-address" class="form-control" /></td>
+                                </tr>
+                                <tr x-show="showRel3">
+                                    <td><input type="text" name="rel-3-name" class="form-control" /></td>
+                                    <td><input type="text" name="rel-3-nationality" class="form-control" /></td>
+                                    <td><input type="text" name="rel-3-relationship" class="form-control" /></td>
+                                    <td><input type="text" name="rel-3-address" class="form-control" /></td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="4"><button x-show="addMore" type="button" @click="more">More</button>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <!--
                         <div class="my-3">
                             <div class="loading">Loading</div>
                             <div class="error-message"></div>
                             <div class="sent-message">Your message has been sent. Thank you!</div>
                         </div> 
                         -->
-                        <div class="text-center">
-                            <button type="submit">Submit</button>
-                        </div>
-                    </form>
-                </div>
-
+                    <div class="text-center">
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
             </div>
 
         </div>
-    </section><!-- End Contact Section -->
 
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/purecounter/purecounter.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <!-- <script src="assets/vendor/php-email-form/validate.js"></script> -->
-
-    <!-- Template Main JS File -->
-    <script src="assets/js/main.js"></script>
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <script type="text/javascript">
-        document.addEventListener('alpine:init', () => {
-            Alpine.data('relatives', () => ({
-                showRel1: true,
-                showRel2: false,
-                showRel3: false,
-                addMore: true,
-                more() {
-                    if (!this.showRel2) {
-                        this.showRel2 = true;
-                    } else if (!this.showRel3) {
-                        this.showRel3 = true;
-                        this.addMore = false;
-                    }
-                },
-            }))
-        })
-    </script>
-</body>
-
-</html>
+    </div>
+</section><!-- End Contact Section -->

@@ -4,7 +4,7 @@ import { requiresAuth } from 'express-openid-connect';
 import { saveApplication } from '../services/datastore';
 import * as mailer from '../services/mailer';
 
-import logger  from '../services/logger';
+import logger from '../services/logger';
 const router = express.Router();
 
 const toApplication = (request) => {
@@ -33,15 +33,15 @@ router.post('/', async (req, res) => {
     const user = req.oidc.user;
 
     try {
-        const application = toApplication({...req.body, username: user.email});
-    
+        const application = toApplication({ ...req.body, username: user.email });
+
         // save the application
         saveApplication(application);
-    
+
         // send the confirmation email
         await mailer.send(user.email, 'Volare - Application received', `We have an application for ${application.fullname}`);
-    
-        res.redirect('submitted');
+
+        res.redirect(`submitted?fullname=${application.fullname}&id=${application.id}`);
     } catch (error) {
         res.redirect('error');
     }
