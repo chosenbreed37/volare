@@ -20,6 +20,7 @@ const upload = multer();
 
 var app = express();
 const port = process.env.PORT || 3000;
+const OFFLINE = process.env.OFFLINE || false;
 
 // static files
 app.use(express.static('public'));
@@ -53,7 +54,9 @@ logger.info('processs.env.BASE_URL: ', process.env.BASE_URL);
 logger.info('processs.env.PORT: ', process.env.PORT);
 logger.info('Base Url: ', config.baseURL);
 
-app.use(auth(config));
+if (!OFFLINE) {
+  app.use(auth(config));
+}
 //app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -65,9 +68,11 @@ app.use(express.static(path.join(__dirname, '../public')));
 
 // Middleware to make the `user` object available for all views
 app.use(function (req, res, next) {
-  res.locals.user = req.oidc.user;
-  res.locals.isAuthenticated = req.oidc.isAuthenticated();
-  res.locals.activeRoute = req.originalUrl;
+  if (!OFFLINE) {
+    res.locals.user = req.oidc.user;
+    res.locals.isAuthenticated = req.oidc.isAuthenticated();
+    res.locals.activeRoute = req.originalUrl;
+  }
   next();
 });
 

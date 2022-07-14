@@ -18,6 +18,7 @@ db.serialize(function () {
   db.run("CREATE TABLE IF NOT EXISTS applications ( \
     id TEXT UNIQUE, \
     username TEXT, \
+    application_date TEXT, \
     timestamp TEXT \
     sequence_number TEXT \
     country TEXT \
@@ -28,14 +29,16 @@ db.serialize(function () {
 
 });
 
-db.all('select * from applications', (error, rows) => {
-  if (error) {
-    console.log('>>> error: ', error);
-  } else {
-    rows && rows.forEach(application => {
-      console.log('>>> application: ', application.id);
-    });
-  }
-});
+
+// db.all('select * from applications', (error, rows) => {
+//   if (error) {
+//     console.log('>>> error: ', error);
+//   } else {
+//     rows && rows.forEach(application => {
+//       const details = toObject(application.form);
+//       console.log(`>>> application: ${application.id}, ${details && details.fullname}`);
+//     });
+//   }
+// });
 
 module.exports = db;

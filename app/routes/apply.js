@@ -5,6 +5,11 @@ import { saveApplication } from '../services/datastore';
 import * as mailer from '../services/mailer';
 
 import logger from '../services/logger';
+
+import 'dotenv/config';
+
+const OFFLINE = process.env.OFFLINE || false;
+
 const router = express.Router();
 
 const toApplication = (request) => {
@@ -21,16 +26,22 @@ const toApplication = (request) => {
     };
 }
 
-router.get('/', requiresAuth(), (req, res) => {
-    logger.info('/apply...');
-    res.render('apply', { title: 'Apply', user: req.oidc.user });
-});
+if (OFFLINE) {
+    router.get('/', (req, res) => {
+        logger.info('/apply...');
+        res.render('apply', { title: 'Apply', user: { email: 'chosenbreed@gmail.com' } });
+    });
+} else {
+    router.get('/', requiresAuth(), (req, res) => {
+        logger.info('/apply...');
+        res.render('apply', { title: 'Apply', user: req.oidc.user });
+    });
+}
 
 router.post('/', async (req, res) => {
 
     logger.info('post apply...');
-    logger.info('>>> user: ', req.oidc.user);
-    const user = req.oidc.user;
+    const user = OFFLINE ? { email: 'chosenbreed@gmail.com'} : req.oidc.user;
 
     try {
         const application = toApplication({ ...req.body, username: user.email });

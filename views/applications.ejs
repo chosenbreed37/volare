@@ -4,6 +4,30 @@
 	<div class="container">
 		<div class="row">
 			Applications
+			<table>
+				<thead>
+					<tr>
+						<th>Date</th>
+						<th>Name</th>
+						<th>Nationality</th>
+						<th>Status</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+
+					<% for (var i=0; i < applications.length; i++ ) { %>
+						<tr>
+							<td><%= applications[i].date %></td>
+							<td><%= applications[i].fullname %></td>
+							<td><%= applications[i].nationality %></td>
+							<td><%= applications[i].status %></td>
+							<td><a class="getstarted scrollto" href="/applications/<%= applications[i].id %>"">View</a></td>
+							<% } %>
+						</tr>
+					</tbody>
+			</table>
+
 		</div>
 	</div>
 

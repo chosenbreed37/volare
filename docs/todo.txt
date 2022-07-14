@@ -1,0 +1,12 @@
+** TODO **
+add approve button
+add reject button
+add validation
+
+** IN PROGRESS **
+add application detail view
+
+** DONE **
+add view button
+fix application data rendering in applications view
+

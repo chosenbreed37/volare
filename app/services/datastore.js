@@ -25,6 +25,22 @@ const saveApplication = (application) => {
     logger.info(`end:save application ${application.id}`);
 }
 
+const getApplication = (id) => {
+    return new Promise((resolve, reject) => {
+
+        const query = 'select * from applications where id = ?';
+        db.all(query, [id], (error, rows) => {
+            if (error) {
+                logger.error(`Error retrieving application ${id}. ${error}`);
+                reject(error);
+            } else {
+                logger.debug('>>> applications: ', JSON.stringify(rows));
+                resolve(rows && rows[0] || null);
+            }
+        })
+    });
+}
+
 const getApplications = (username) => {
     return new Promise((resolve, reject) => {
 
@@ -41,7 +57,23 @@ const getApplications = (username) => {
     });
 }
 
+const getAllApplications = (username) => {
+    return new Promise((resolve, reject) => {
+        const query = 'select * from applications';
+        db.all(query, [username], (error, rows) => {
+            if (error) {
+                logger.error(`Error retrieving applications. ${error}`);
+                reject(error);
+            } else {
+                resolve(rows || []);
+            }
+        })
+    });
+}
+
 export {
     saveApplication,
-    getApplications
+    getApplications,
+    getAllApplications,
+    getApplication
 }
